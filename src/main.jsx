@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './routes/Home.jsx'
 import Contact from './routes/Contact.jsx'
+import ErrorPage from './routes/ErrorPage.jsx'
 
 /* Estrutura de objetos do router
 const router = createBrowserRouter([
@@ -27,6 +28,8 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    // Iserindo página de erro
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
