@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 
 // 1. Configurando router
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 
 import Home from './routes/Home.jsx'
 import Contact from './routes/Contact.jsx'
@@ -44,6 +44,11 @@ const router = createBrowserRouter([
       {
         path: '/contact/:id',
         element: <ContactDetails />
+      },
+      // 7. Quando uma página deixa de existir / navigate para paginas nao existentes
+      {
+        path: '/oldcontact',
+        element: <Navigate to='/contact'/>
       }
     ]
   },
