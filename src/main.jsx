@@ -10,7 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Contact from './routes/Contact.jsx'
 
-// Estrutura de objetos do router
+/* Estrutura de objetos do router
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,6 +20,24 @@ const router = createBrowserRouter([
     path: 'contact',
     element: <Contact />
   }
+]) */
+
+// 2. Reaproveitamento de estruturas
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: 'contact',
+        element: <Contact />
+      }
+    ]
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
