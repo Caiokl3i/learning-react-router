@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.jsx'
 
 // 1. Configurando router
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './routes/Home.jsx'
@@ -28,7 +27,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // Iserindo página de erro
+    // 3. Iserindo página de erro
     errorElement: <ErrorPage />,
     children: [
       {
